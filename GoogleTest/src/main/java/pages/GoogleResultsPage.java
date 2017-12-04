@@ -66,7 +66,7 @@ public class GoogleResultsPage {
     }
 
     public void  screenElement (WebElement element, String keyword ){
-        String screenPath = "/home/lena/SCHOOL/Testing/tests/GoogleTest/";
+        String screenPath = "/home/lena/SCHOOL/Testing/tests/helpforgit//GoogleTest/";
         Shutterbug.shootElement(driver, element).withName(keyword).save(screenPath);
     }
 

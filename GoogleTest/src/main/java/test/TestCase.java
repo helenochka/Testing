@@ -1,6 +1,5 @@
 package test;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,12 +7,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import com.assertthat.selenium_shutterbug.core.PageSnapshot;
 import pages.GoogleResultsPage;
 import pages.GoogleSearchPage;
-
-import java.io.File;
+import pages.Pair;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,15 +20,8 @@ import java.util.Collection;
 public class TestCase {
 
     static WebDriver driver;
-    String screenPath = "/home/lena/SCHOOL/Testing/tests/GoogleTest/";
+    String screenPath = "/home/lena/SCHOOL/Testing/tests/helpforgit/GoogleTest/";
 
-    public class Pair<Integer,PageSnapshot> {
-        private Integer key;
-        private PageSnapshot value;
-        public Pair(Integer key, PageSnapshot value){ this.key = key; this.value = value; }
-        public Integer  getPage(){ return this.key; }
-        public PageSnapshot getScreen(){ return this.value; }
-    }
 
     @Parameterized.Parameter(0)
     public String product;
